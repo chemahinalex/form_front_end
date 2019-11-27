@@ -38,7 +38,6 @@ export class AuthorizationPageComponent implements OnInit {
     this.submitted = true;
     if (!form.valid) return;
     const data: SendAuthorizationData = form.value;
-    console.log('---data---', data)
 
     this.sendDataService.send(data).subscribe((response) => {
       this.submitted = false;
