@@ -1,0 +1,52 @@
+<main class="authorization-page">
+  <article class="title-area">
+    <h1>authorization</h1>
+  </article>
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form)">
+    <div class="field-wrapper">
+      <app-input
+        #email
+        label="Email"
+        placeholder="enter your Email"
+        type="email"
+        [defaultTexts]="{label: 'Email', placeholder: 'enter your Email'}"
+        formControlName="email"
+        [hasError]="(form.get('email').dirty || submitted) && !!form.get('email').errors"
+      >
+        <span *ngIf="!!form.get('email').errors && !!form.get('email').errors.required">
+          Email field required
+        </span>
+        <span *ngIf="!!form.get('email').errors && !!form.get('email').errors.pattern && !email.focused">
+          Invalid email format
+        </span>
+      </app-input>
+    </div>
+
+    <div class="field-wrapper">
+      <app-input
+        #password
+        label="Password"
+        type="password"
+        placeholder="enter your password"
+        [defaultTexts]="{label: 'Your password', placeholder: 'e.g. John Doe'}"
+        formControlName="password"
+        [hasError]="(form.get('password').dirty || submitted) && !!form.get('password').errors"
+      >
+        <span *ngIf="!!form.get('password').errors && !!form.get('password').errors.required">
+          Password field required
+        </span>
+        <span *ngIf="!!form.get('password').errors && !!form.get('password').errors.pattern && !password.focused">
+          Invalid password format
+        </span>
+
+      </app-input>
+    </div>
+
+
+    <div class="button-area">
+      <app-button text="Send" defaultText="Send" type="submit"></app-button>
+    </div>
+
+  </form>
+</main>
+

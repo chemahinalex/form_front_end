@@ -1,16 +1,50 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule} from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+// import { TranslateModule } from '@ngx-translate/core';
+
+// Routing
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
+// Pages
+import { AuthorizationPageComponent } from './pages/authorization-page/authorization-page.component';
+
+// Components
+import { ButtonComponent } from './components/button/button.component';
+import { InputComponent } from './components/input/input.component';
+import { NotificationComponent } from './components/notification/notification.component';
+import { ModalComponent } from './components/modal/modal.component';
+
+// Services
+import { AuthorizationService } from './services/authorization.service';
+
+// Modules
+// import { I18nBrowserModule } from './i18n/i18n.browser.module';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AuthorizationPageComponent,
+    ButtonComponent,
+    InputComponent,
+    NotificationComponent,
+    ModalComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' })
+    // TranslateModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    // I18nBrowserModule,
   ],
-  providers: [],
+  providers: [AuthorizationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

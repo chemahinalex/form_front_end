@@ -1,3 +1,10 @@
-<div>
-  {{title}}
-</div>
+<main class="wrapper">
+  <router-outlet></router-outlet>
+  <app-notification [type]="notificationType" [visible]="notificationVisible">
+    <span notification-label *ngIf="notificationType === 'error'">{{ 'notification.error' }}</span>
+    <span notification-message *ngIf="notificationType === 'error'">{{ 'notification.invalid_data' }}</span>
+    <span notification-label *ngIf="notificationType === 'success'">{{ 'notification.success' }}</span>
+    <span notification-message *ngIf="notificationType === 'success'">{{ 'notification.data_saved' }}</span>
+  </app-notification>
+<!--  <app-modal [visible]="modalVisible" [modalInfo]="modalInfo"></app-modal>-->
+</main>

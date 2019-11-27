@@ -1,0 +1,17 @@
+<div class="input--wrapper" [ngClass]="{'error': hasError}">
+  <label class="label" (click)="labelClick()">{{label}}</label>
+  <input
+    [type]="type"
+    [placeholder]="placeholder"
+    [(ngModel)]="model"
+    (blur)="trim()"
+    (input)="onInput()"
+    (focus)="onFocus()"
+    [ngClass]="{'input-error': hasError}"
+    #input
+    class="input--component"
+  >
+  <div *ngIf="hasError" class="error">
+    <ng-content></ng-content>
+  </div>
+</div>

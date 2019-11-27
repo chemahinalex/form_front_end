@@ -1,0 +1,3 @@
+<button [attr.type]="type" (click)="onClick.emit()" class="button" [ngClass]="{'large-padding': paddingMode === 'large' }" [disabled]="disabled">
+  <span class="button--text">{{text}}</span>
+</button>

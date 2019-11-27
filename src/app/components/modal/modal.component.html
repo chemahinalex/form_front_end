@@ -1,0 +1,11 @@
+<div class="modal" [@expandedPanel]="state">
+  <div *ngIf="modalInfo" class="modal--content">
+    <div class="modal--content__close-btn" (click)="close()">&times;</div>
+    <div class="modal--content__header">
+      {{ modalInfo.header }}
+    </div>
+    <div class="modal--content__text">
+      {{ modalInfo.text }}
+    </div>
+  </div>
+</div>

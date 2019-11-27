@@ -1,0 +1,22 @@
+.authorization-page {
+  width: 500px;
+  margin: 0 auto;
+  .title-area {
+    text-align: center;
+    h1 {
+      text-transform: uppercase;
+    }
+  }
+  form {
+    background: #fafbfc;
+    padding: 20px 40px;
+    border-radius: 5px;
+    .field-wrapper {
+      width: 100%;
+    }
+  }
+  .button-area {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

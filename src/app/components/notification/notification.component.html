@@ -1,0 +1,10 @@
+<div class="notification"
+     [@expandedPanel]="state"
+     [ngClass]="{ 'error': type === 'error', 'success': type === 'success', 'warning': type === 'warning' }">
+  <div class="notification--label">
+    <ng-content select="[notification-label]"></ng-content>
+  </div>
+  <div class="notification--message">
+    <ng-content select="[notification-message]"></ng-content>
+  </div>
+</div>
