@@ -1,0 +1,13 @@
+.home-page {
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  div {
+    padding: 10px 20px;
+    cursor: pointer;
+    &:hover {
+      background: #f1f1f1;
+    }
+  }
+}

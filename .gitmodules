@@ -1,3 +1,3 @@
-[submodule "form_front_end_admin"]
-	path = form_front_end_admin
+[submodule "admin"]
+	path = projects/admin
 	url = https://github.com/chemahinalex/form_front_end_admin

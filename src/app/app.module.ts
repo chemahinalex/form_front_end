@@ -12,7 +12,7 @@ import { AppComponent } from './app.component';
 
 // Pages
 import { AuthorizationPageComponent } from './pages/authorization-page/authorization-page.component';
-
+import { HomePageComponent } from './pages/home-page/home-page.component';
 // Components
 import { ButtonComponent } from './components/button/button.component';
 import { InputComponent } from './components/input/input.component';
@@ -24,6 +24,7 @@ import { AuthorizationService } from './services/authorization.service';
 
 // Modules
 // import { I18nBrowserModule } from './i18n/i18n.browser.module';
+import { AdminSharedModule } from "../../projects/admin/src/app/app.shared.module";
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AuthorizationService } from './services/authorization.service';
     ButtonComponent,
     InputComponent,
     NotificationComponent,
-    ModalComponent,
+    HomePageComponent,
+    ModalComponent
   ],
   imports: [
     // TranslateModule,
@@ -42,6 +44,7 @@ import { AuthorizationService } from './services/authorization.service';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AdminSharedModule.forRoot()
     // I18nBrowserModule,
   ],
   providers: [AuthorizationService],
