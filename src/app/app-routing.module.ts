@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Components
 import { AuthorizationPageComponent } from './pages/authorization-page/authorization-page.component';
-import { HomePageComponent } from "./pages/home-page/home-page.component";
+import { HomePageComponent } from './pages/home-page/home-page.component';
 // import {AdminComponent} from "../../projects/admin/src/app/app.component";
 
 // Guards
-import { AuthGuardService } from "./guards/auth-guard.service";
-import { AdminGuardService } from "./guards/admin-guard.service";
+import { AuthGuardService } from './guards/auth-guard.service';
+import { AdminGuardService } from './guards/admin-guard.service';
 
 const routes: Routes = [
   {
@@ -18,7 +18,7 @@ const routes: Routes = [
   },
   {
     path: 'admin',
-    loadChildren: '../../projects/admin/src/app/admin.module#AdminModule',
+    loadChildren: '../../projects/module-admin/src/app/admin.module#AdminModule',
     canActivate: [
       AdminGuardService,
       AuthGuardService

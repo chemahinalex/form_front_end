@@ -24,7 +24,7 @@ import { AuthorizationService } from './services/authorization.service';
 
 // Modules
 // import { I18nBrowserModule } from './i18n/i18n.browser.module';
-import { AdminSharedModule } from "../../projects/admin/src/app/app.shared.module";
+import { AdminSharedModule } from '../../projects/module-admin/src/app/app.shared.module';
 
 @NgModule({
   declarations: [
