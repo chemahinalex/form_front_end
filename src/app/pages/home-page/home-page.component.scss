@@ -1,13 +1,23 @@
-.home-page {
+main {
   width: 900px;
   margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  div {
-    padding: 10px 20px;
-    cursor: pointer;
-    &:hover {
-      background: #f1f1f1;
+  nav {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      padding: 10px 20px;
+      cursor: pointer;
+      text-decoration: none;
+      outline: none;
+      &:hover {
+        background: #f1f1f1;
+      }
     }
   }
+  .home-page {
+    display: flex;
+    margin-top: 20px;
+
+  }
 }
+
